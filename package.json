@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "dev": "npm run clean && webpack && webpack-dev-server",
-    "prod": "npm run clean && webpack && serve dist"
+    "prod": "NODE_ENV=production && npm run clean && webpack && serve dist"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,9 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^6.0.0",

@@ -2,9 +2,13 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "es6",
+        "module": "ESNext",
         "target": "es5",
         "jsx": "react",
-        "allowJs": false
-    }
+        "allowJs": false,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+    },
+    "include": [ "./src/**/*" ],
+    "exclude": [ "node_modules" ]
 }
