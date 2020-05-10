@@ -11,25 +11,24 @@ type ButtonProps = BaseProps & {
 };
 
 export const Button = styled.button`
-    border-radius: 3px;
-    padding: 0.5rem 0;
+    padding: 0.7rem;
     width: 11rem;
     border-radius: 5px;
     background: ${(props: ButtonProps) => (props.primary ? colors.orange.primary : colors.white)};
-    color: ${(props: ButtonProps) => (props.primary ? colors.white : colors.black)};
+    color: ${(props: ButtonProps) => (props.primary ? colors.white : colors.gray[900])};
     transition: all 100ms ease-in-out;
-    border: 2px solid ${(props: ButtonProps) => (!props.primary && colors.orange.primary)};
+    border: 2px solid ${colors.orange.primary};
     font-size: 15px;
     text-transform: capitalize;
 
-    margin-right: ${(props: ButtonProps) => props.mr ?? 0}px;
-    margin-left: ${(props: ButtonProps) => props.ml ?? 0}px;
-    margin-top: ${(props: ButtonProps) => props.mt ?? 0}px;
-    margin-bottom: ${(props: ButtonProps) => props.mb ?? 0}px;
+    margin-right: ${(props: ButtonProps) => props.mr ?? 4}px;
+    margin-left: ${(props: ButtonProps) => props.ml ?? 4}px;
+    margin-top: ${(props: ButtonProps) => props.mt ?? 4}px;
+    margin-bottom: ${(props: ButtonProps) => props.mb ?? 4}px;
 
     &:hover {
-        background: ${({ primary }: ButtonProps) => primary ? colors.orange[600] : colors.gray};
-        color: #fff;
+        color: ${({ primary }: ButtonProps) => !primary && colors.gray[900]};
+        background: ${({ primary }: ButtonProps) => primary ? colors.orange[600] : colors.gray[300]};
         cursor: pointer;
     }
 `;

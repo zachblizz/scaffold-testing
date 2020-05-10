@@ -1,7 +1,6 @@
 export const Theme = {
     colors: {
         white: "#fff",
-        gray: "#eee",
         black: "#333",
         purple: {
             100: "#faf5ff",
@@ -13,6 +12,17 @@ export const Theme = {
             700: "#6b46c1",
             800: "#553c9a",
             900: "#44337a",
+        },
+        gray: {
+            100: "#f8f8f8",
+            200: "#f4f4f4",
+            300: "#f1f1f1",
+            400: "#eeeeee",
+            500: "#c6c6c6",
+            600: "#b0b0b0",
+            700: "#9a9a9a",
+            800: "#848484",
+            900: "#585858",
         },
         orange: {
             primary: "#ffae19",

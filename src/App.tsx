@@ -1,17 +1,9 @@
 import React, { useState, useCallback } from "react";
-import styled from "styled-components";
 
 import { Dummy } from "./components/Dummy";
-import { Button } from "./components/ui/Button";
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-`;
+import { Button } from "./components/ui/Button";
+import { Container } from "./components/ui/Container";
 
 export default function App() {
     const [show, setShow] = useState<boolean>(false);
@@ -20,13 +12,16 @@ export default function App() {
         setShow(s => !s);
     }, [setShow]);
 
-    return <Container>
-        Hello Worlds!
-        <div>
-            <Button primary onClick={handleClick}>click me</Button>
-        </div>
-        <Dummy show={show}>
-            <p>this is dummy</p>
-        </Dummy>
-    </Container>;
+    return (
+        <Container>
+            Hello Worlds!
+            <div>
+                <Button onClick={handleClick} >click me</Button>
+                <Button onClick={handleClick} primary >click me</Button>
+            </div>
+            <Dummy show={show}>
+                <div>this is dummy</div>
+            </Dummy>
+        </Container>
+    );
 }
