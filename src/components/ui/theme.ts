@@ -1,0 +1,30 @@
+export const Theme = {
+    colors: {
+        white: "#fff",
+        gray: "#eee",
+        black: "#333",
+        purple: {
+            100: "#faf5ff",
+            200: "#e9d8fd",
+            300: "#d6bcfa",
+            400: "#b794f4",
+            500: "#9f7aea",
+            600: "#805ad5",
+            700: "#6b46c1",
+            800: "#553c9a",
+            900: "#44337a",
+        },
+        orange: {
+            primary: "#ffae19",
+            100: "#ffedcc",
+            200: "#ffe4b2",
+            300: "#ffdb99",
+            400: "#ffd27f",
+            500: "#ffc966",
+            600: "#ffc04c",
+            700: "#ffb732",
+            800: "#ffae19",
+            900: "#ffa500",
+        },
+    },
+};

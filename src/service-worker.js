@@ -1,4 +1,4 @@
-import { CacheStrategies, Scaffold } from "@archetypical/scaffold/lib/index"
+import { CacheStrategies, Scaffold } from "@archetypical/scaffold/lib/index";
 
 const offlineAssets = [
     "/main.bundle.js",
