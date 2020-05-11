@@ -12,7 +12,6 @@ type ButtonProps = BaseProps & {
 
 export const Button = styled.button`
     padding: 0.7rem;
-    width: 11rem;
     border-radius: 5px;
     background: ${(props: ButtonProps) => (props.primary ? colors.orange.primary : colors.white)};
     color: ${(props: ButtonProps) => (props.primary ? colors.white : colors.gray[900])};

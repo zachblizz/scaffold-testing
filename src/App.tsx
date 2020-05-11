@@ -17,7 +17,7 @@ export default function App() {
             Hello Worlds!
             <div>
                 <Button onClick={handleClick} >click me</Button>
-                <Button onClick={handleClick} primary >click me</Button>
+                <Button onClick={handleClick} primary >click me too</Button>
             </div>
             <Dummy show={show}>
                 <div>this is dummy</div>
