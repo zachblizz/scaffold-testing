@@ -8,7 +8,7 @@ module.exports = {
   mode: isProd ? "production" : "development",
   entry: {
     main: "./src/index.tsx",
-    "service-worker": "./src/service-worker.js",
+    sw: "./src/service-worker.js",
   },
   output: {
     path: path.join(__dirname, "dist"),

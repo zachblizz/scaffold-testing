@@ -9,8 +9,9 @@
     "lint": "eslint ./",
     "coverage": "jest --coverage",
     "clean": "rm -rf dist",
-    "dev": "npm run clean && webpack && webpack-dev-server",
-    "prod": "NODE_ENV=production && npm run clean && npm test && webpack && serve dist"
+    "build": "npm run clean && webpack",
+    "dev-serve": "npm run build && webpack-dev-server",
+    "prod-serve": "npm run lint && npm test && npm run build && serve dist"
   },
   "keywords": [],
   "author": "",
@@ -49,6 +50,7 @@
   },
   "dependencies": {
     "@archetypical/scaffold": "^1.0.1",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0"

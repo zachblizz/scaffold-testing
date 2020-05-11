@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scaffold Testing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         .body, * {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         .container {
@@ -23,7 +24,7 @@
     <div id="root"><div class="container">loading...</div></div>
     <script>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/service-worker.bundle.js")
+            navigator.serviceWorker.register("/sw.bundle.js")
                 .then(() => console.log("registered"))
                 .catch(console.error);
         }

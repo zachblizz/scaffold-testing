@@ -18,7 +18,7 @@
     "plugins": [ "react" ],
     "rules": {
         "indent": [ "error", 4 ],
-        "linebreak-style": [ "warn", "unix" ],
+        "linebreak-style": [ "warn", "windows" ],
         "quotes": [ "warn", "double" ],
         "semi": [ "error", "always" ],
         "react/no-direct-mutation-state": "error"
