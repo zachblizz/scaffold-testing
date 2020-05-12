@@ -14,22 +14,20 @@ function setup(data?: any) {
     return render(<Data />);
 }
 
-describe("Data tests", () => {
-    it("should render 'loading' first", () => {
-        const { getByText } = setup();
-        expect(getByText(/loading/i)).toBeInTheDocument();
-    });
+test("should render 'loading' first", () => {
+    const { getByText } = setup();
+    expect(getByText(/loading/i)).toBeInTheDocument();
+});
 
-    it("should render data", async () => {
-        const data = { hello: "world" };
-        const { getByText, container } = setup(data);
+test("should render data", async () => {
+    const data = { hello: "world" };
+    const { getByText, container } = setup(data);
 
-        // Should see loading initially
-        const loading = getByText(/loading/i);
-        await waitFor(() => expect(loading).toBeInTheDocument());
-        // Should have the pre tag in the document
-        await waitFor(() =>
-            expect(container.querySelector("pre")).toBeInTheDocument()
-        );
-    });
+    // Should see loading initially
+    const loading = getByText(/loading/i);
+    await waitFor(() => expect(loading).toBeInTheDocument());
+    // Should have the pre tag in the document
+    await waitFor(() =>
+        expect(container.querySelector("pre")).toBeInTheDocument()
+    );
 });
